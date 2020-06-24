@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace EmployeeManagement.Web.Pages
@@ -10,13 +11,15 @@ namespace EmployeeManagement.Web.Pages
     public class EmployeeListBase : ComponentBase
     {
         public IEnumerable<Employee> Employees { get; set; }
-        protected override Task OnInitializedAsync()
+        protected override async Task OnInitializedAsync()
         {
-            LoadEmployees();
-            return base.OnInitializedAsync();
+            await Task.Run(LoadEmployees);
+            //return base.OnInitializedAsync();
         }
         private void LoadEmployees()
         {
+            Thread.Sleep(3000);
+
             Employee e1 = new Employee
             {
                 EmployeeId = 1,
