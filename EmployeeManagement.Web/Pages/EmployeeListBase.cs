@@ -28,7 +28,7 @@ namespace EmployeeManagement.Web.Pages
                 Email = "john.smith@email.com",
                 DateOfBirth = new DateTime(1980, 10, 5),
                 Gender = Gender.Male,
-                Department = new Department { DepartmentId = 1, DepartmentName = "Sales" },
+                DepartmentId = 1,
                 PhotoPath = "images/john.png"
             };
             Employee e2 = new Employee
@@ -39,7 +39,7 @@ namespace EmployeeManagement.Web.Pages
                 Email = "bob.smith@email.com",
                 DateOfBirth = new DateTime(1990, 01, 01),
                 Gender = Gender.Male,
-                Department = new Department { DepartmentId = 2, DepartmentName = "IT" },
+                DepartmentId = 2,
                 PhotoPath = "images/bob.png"
             };
             Employee e3 = new Employee
@@ -50,7 +50,7 @@ namespace EmployeeManagement.Web.Pages
                 Email = "linda.smith@email.com",
                 DateOfBirth = new DateTime(1970, 05, 20),
                 Gender = Gender.Female,
-                Department = new Department { DepartmentId = 1, DepartmentName = "Sales" },
+                DepartmentId = 3,
                 PhotoPath = "images/linda.png"
             };
 
